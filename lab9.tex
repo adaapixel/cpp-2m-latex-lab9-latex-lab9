@@ -1,0 +1,127 @@
+\documentclass[12pt]{article} % Клас документа, шрифт 12pt
+
+\usepackage[utf8]{inputenc} % UTF-8 кодування
+\usepackage[T2A]{fontenc} % Шрифти кирилиці
+\usepackage[ukrainian]{babel} % Українська мова
+\usepackage{geometry} % Поля сторінки
+\geometry{a4paper, margin=2cm} % Формат A4, поля 2 см
+
+\usepackage{xcolor} % Кольори
+\usepackage{tcolorbox} % Кольорові рамки
+\usepackage{graphicx} % Зображення
+\usepackage{amsmath, amsthm, amssymb} % Математика, теореми, символи
+
+\usepackage{caption} % Підписи до рисунків
+\captionsetup{labelsep=period} % Роздільник у підписах "Рис. 1."
+
+\newtheorem{theorem}{Теорема} % Середовище для теорем
+
+\usepackage{fancyhdr} % Колонтитули
+\pagestyle{fancy} % Використання fancyhdr
+\fancyhf{} % Очищення стандартних колонтитулів
+\setlength{\headheight}{15pt} % Висота верхнього колонтитулу
+
+\newcommand{\student}{Левенець Владислава} % ПІБ студента
+\newcommand{\labdate}{\today} % Дата
+
+\fancyhead[L]{\student} % Лівий верхній колонтитул
+\fancyhead[R]{\labdate} % Правий верхній колонтитул
+\fancyfoot[C]{\thepage} % Нижній колонтитул — номер сторінки
+
+\begin{document}
+
+\begin{center}
+    \Large \textbf{Лабораторна робота № 9} \\
+    \large \textbf{Тема: Набір математичних текстів та автоматизація в LaTeX}
+\end{center}
+
+\section*{Мета роботи}
+\textit{Навчитися вводити математичні формули та структурувати документ, використовувати кольорові рамки для визначень, теорем та прикладів, а також вставляти зображення}.
+
+\section{Короткі теоретичні відомості}
+
+\begin{tcolorbox}[colback=blue!10!white, colframe=red!80!black, title=Визначення]
+% Введіть визначення квадрата, змініть колір рамки
+Квадрат — це чотирикутник з усіма сторонами рівними та всіма кутами прямими.
+\end{tcolorbox}
+
+% Введіть текст \\На рисунку ... дивись зразок. 
+На рисунку 1 зображено квадрат ABCD. Прямокутник є паралелограмом, тому і квадрат - паралелограм, у якого всі сторони рівні, тобто він є і ромбом. Отже, квадрат має в властиості прямокутника та ромба.
+
+%додати зображення, файл foto1.png 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=1]{foto1.png}
+    \caption{Діагоналі квадрата}
+    \label{fig:foto1}
+\end{figure}
+
+\medskip
+\textit{Властивості квадрата:}
+\begin{enumerate}
+    \item Усі кути квадрата прямі.
+    \item Периметр $P_{ABCD} = 4AB$.
+    \item Діагоналі квадрата між собою рівні (\ref{fig:foto2})
+    \item Діагоналі квадрата взаємно перпендинелярні й точкою перетину діляться навпіл (\ref{fig:foto2})
+    \item Діагоналі квадрата ділять його куи навпіл, тобто утворюють кути $45^\circ$ зі сторонами квадрата(\ref{fig:foto2})
+    \item Точка перетину діагоналей квадрата рівновіддалена від усіх його вершин:   $AO=BO=CO=DO$
+   %Введіть властивості 2-6 за зразком
+   
+\end{enumerate}
+
+%додати зображення, файл foto2.png 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=1]{foto2.png}
+    \caption{Діагоналі квадрата}
+    \label{fig:foto2}
+\end{figure}
+
+\begin{tcolorbox}[colback=green!5!white, colframe=green!75!black, title=Приклад 1]
+
+Точки $K$ і $M$ належать відповідно діагоналям $BD$ і $AC$ квадрата $ABCD$, причому 
+$AM = \dfrac{1}{4}AC,\quad BK = \dfrac{1}{4}BD$. 
+Доведіть, що $\triangle ADM = \triangle BAK$~(\ref{fig:foto3}).
+
+\end{tcolorbox}
+
+%додати зображення, файл foto3.png 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=1]{foto3.png}
+    \caption{Діагоналі квадрата}
+    \label{fig:foto3}
+\end{figure}
+
+\begin{proof}
+\begin{enumerate}
+    \item $\angle MAD = \angle ABK = 45^\circ$, а $AD = AB$ як сторони квадрата.
+    
+    \item Оскільки $AC = BD$ як діагоналі квадрата і 
+    $AM = \dfrac{1}{4}AC,\quad BK = \dfrac{1}{4}BD$, то $AM = BK$.
+    
+    \item Отже, $\triangle AMD = \triangle BKA$ 
+    (за двома сторонами та кутом між ними, перша ознака рівності трикутників).
+    
+    \item Звідси випливає рівність відповідних елементів трикутників.
+\end{enumerate}
+\end{proof}
+
+\section{Ознаки квадрата}
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Ознаки квадрата]
+\begin{theorem}
+1) Якщо діагоналі прямокутника взаємно перпендикулярні, то він є квадратом \\
+2) Якщо діагоналі ромба між собою рівні то він є квадратом
+\end{theorem}
+\end{tcolorbox}
+
+\begin{proof}
+%Введіть текст доведення використовуючи зразок
+1) Прямокутник є паралелограмом, а паралелограм зі взаємно перпендикулярними діагоналями є ромбом. Отже, у заданого прямокутника всі сторони рівні, а тому він є квадратом.
+ \\
+2) Ромб є паралелограмом, а паралелограм з рівними діагоналями є прямокутником. Отже, у розглянутому ромбі всі кути прямі, а тому він є квадратом
+\end{proof}
+
+
+\end{document}
