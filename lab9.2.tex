@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ukrainian]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr} % ДОДАНО
+
+\geometry{margin=2cm}
+
+\newcommand{\student}{Левенець Владислава}
+\newcommand{\labdate}{\today}
+
+\pagestyle{fancy} % ДОДАНО
+\fancyhead[L]{\student}
+\fancyhead[R]{\labdate}
+
+\title{Стереометрія. Призма і паралелепіпед}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Призма}
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Визначення]
+Призма — многогранник, дві грані якого є рівними многокутниками,
+які лежать у паралельних площинах (основи призми), а решта граней —
+паралелограми (бічні грані).
+\end{tcolorbox}
+
+Висота призми — відрізок перпендикуляра, опущеного з точки однієї основи
+на площину іншої основи.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.8]{foto11.png}
+    \caption{Зображення призми (прямої та похилої)}
+    \label{fig:prism}
+\end{figure}
+
+\textbf{Позначення:}
+\begin{itemize}
+    \item $l$ — бічне ребро;
+    \item $P$ — периметр основи;
+    \item $S_{\text{осн}}$ — площа основи;
+    \item $H$ — висота;
+    \item $V$ — об’єм;
+    \item $S_{\text{біч}}$ — площа бічної поверхні;
+    \item $S_{\text{повн}}$ — площа повної поверхні.
+\end{itemize}
+
+\textbf{Формули:}
+\[V = S_{\text{осн}} \cdot H\]
+\[S_{\text{біч}} = P \cdot H\]
+\[S_{\text{повн}} = S_{\text{біч}} + S_{\text{осн}}\]
+
+\section*{Паралелепіпед}
+
+Паралелепіпед призма, основами якої є паралелограми. Усі шість граней паралелепіпеда паралелограми.
+
+Діагоналі паралелепіпеда відрізки, які сполучають вершини паралелепіпеда, що не належать одній і тій же грані.
+
+Паралелепіпед, бічні ребра якого перпендикулярні до площини основи, називається прямим 
+
+Прямий паралелепіпед, основою якого є прямокут-ник, називається прямокутним 
+
+Якщо а, в, с виміри, а діагональ прямокутного паралелепіпеда, то
+
+\textbf{Формули:}
+\[d^2 = a^2 + b^2 + c^2\]
+\[V = abc\]
+\[S_{\text{повн}} = 2(ab + bc + ac)\]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{foto22.png}
+    \caption{(прямокутна призма)}
+    \label{fig:prism}
+\end{figure}
+
+
+\end{document}
